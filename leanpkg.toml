@@ -1,0 +1,8 @@
+[package]
+name = "Formalized-Voting"
+version = "0.1"
+lean_version = "leanprover-community/lean:3.28.0"
+path = "src"
+
+[dependencies]
+mathlib = {git = "https://github.com/leanprover-community/mathlib", rev = "2ecd65e6de2939f09df9d964782f8ec7ba4aeb5c"}
