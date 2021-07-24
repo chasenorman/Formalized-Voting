@@ -33,7 +33,7 @@ begin
     exact pq.mpr ᾰ,
 end
 
-lemma margin_lemma (P P' : Prof V X) [fintype V] [profile_asymmetric P'] (a b : X) : (a ≠ b) → (∀ (v : V), (P v a b → P' v a b) ∧ (P' v b a → P v b a)) → margin P a b ≤ margin P' a b :=
+lemma margin_lemma (P P' : Prof V X) [fintype V] (a b : X) : (a ≠ b) → (∀ (v : V), (P v a b → P' v a b) ∧ (P' v b a → P v b a)) → margin P a b ≤ margin P' a b :=
 begin
     intro h,
 
@@ -77,7 +77,7 @@ begin
 end
 
 
-lemma margin_lt_margin_of_lift (P P' : Prof V X) [fintype V] [profile_asymmetric P'] (y x : X) : simple_lift P' P x → margin P' y x ≤ margin P y x :=
+lemma margin_lt_margin_of_lift (P P' : Prof V X) [fintype V] (y x : X) : simple_lift P' P x → margin P' y x ≤ margin P y x :=
 begin
     intro lift,
     unfold simple_lift at lift,
